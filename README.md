@@ -2,7 +2,7 @@
 
 ## What's included
 
-EnhancedUI uses Chromium for its UI, and this repo gives you everything you need to start designing those components, including Space Engineers fonts (streamer kit + custom.) For now, all output is placed in the `Content/` directory of the EnhancedUI plugin folder.
+EnhancedUI uses Chromium for its UI, and this repo gives you everything you need to start designing React components, including Space Engineers fonts (streamer kit + custom.) For now, all output is placed in the `Content/` directory of the EnhancedUI plugin folder.
 
 **WARNING**: Using this toolkit will likely overwrite existing UI files in the plugins directory, which may warrant re-installing the plugin if you want to restore the UI provided in the official release (at the time of writing, there is not an official UI.)
 
@@ -12,6 +12,7 @@ EnhandedUI knows to query `localhost:3000` when looking for `Terminal.html`. An 
 
 1. This Workbench requires Node.js. Install if you haven't done so (https://nodejs.org/en/)
 1. Make a copy of <.env_template> and rename it to <.env>.
+1. Set `NODE_ENV` to either "development" or "production"
 1. Set `PROJECT_ROOT` to the path of your Workbench directory.
 1. Set `WEBSITE_ROOT` to the path of your `Content/` directory. Usually this will just be `"C:\Program Files (x86)\Steam\steamapps\common\SpaceEngineers\Bin64\Plugins\Local\EnhancedUI\Content"`
 1. Run `npm i --save-dev` to install all of the packages defined in `package.json`

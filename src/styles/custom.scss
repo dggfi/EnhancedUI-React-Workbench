@@ -1,0 +1,34 @@
+@font-face {
+    src: url("./fonts/space_engineers.ttf");
+    font-family: "Engineer1";
+}
+
+@font-face {
+    src: url("./fonts/space_engineers-webfont.woff") format("woff");
+    font-family: "Engineer2";
+}
+
+@font-face {
+    src: url("./fonts/space_engineers-webfont.woff2") format("woff2");
+    font-family: "Engineer3";
+}
+
+// body {
+//     font-family: "Engineer1", "Engineer2", "Engineer3", monospace, sans-serif;
+// }
+
+.font-engineer {
+    font-family: "Engineer1", "Engineer2", "Engineer3", monospace, sans-serif;
+}
+
+.font-engineer1 {
+    font-family: "Engineer1", monospace, sans-serif;
+}
+
+.font-engineer2 {
+    font-family: "Engineer2", monospace, sans-serif;
+}
+
+.font-engineer3 {
+    font-family: "Engineer3", monospace, sans-serif;
+}
