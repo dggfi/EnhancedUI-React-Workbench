@@ -11,7 +11,7 @@ EnhandedUI knows to query `localhost:3000` when looking for `Terminal.html`. An 
 ## How to use
 
 1. This Workbench requires Node.js. Install if you haven't done so (https://nodejs.org/en/)
-1. Make a copy of <.env_template> and rename it to <.env>.
+1. Make a copy of `.env_template` and rename it to `.env`.
 1. Set `NODE_ENV` to either "development" or "production"
 1. Set `PROJECT_ROOT` to the path of your Workbench directory.
 1. Set `WEBSITE_ROOT` to the path of your `Content/` directory. Usually this will just be `"C:\Program Files (x86)\Steam\steamapps\common\SpaceEngineers\Bin64\Plugins\Local\EnhancedUI\Content"`
