@@ -2,7 +2,8 @@
   "name": "frontend",
   "private": false,
   "scripts": {
-    "build-client": "npx webpack --config webpack.config.js"
+    "build-dev": "npx webpack --config webpack.dev.js",
+    "build-prod": "npx webpack --config webpack.prod.js"
   },
   "author": "",
   "license": "ISC",
@@ -11,29 +12,31 @@
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "@types/react-router-dom": "^5.1.8",
-    "autoprefixer": "^10.3.3",
-    "css-loader": "^6.2.0",
-    "dotenv": "^10.0.0",
-    "html-webpack-plugin": "^5.3.2",
-    "postcss-cli": "^8.3.1",
-    "postcss-loader": "^6.1.1",
+    "framer-motion": "^4.1.17",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.1",
-    "react-spring": "^9.2.4",
     "redux-persist": "^6.0.0",
+    "tailwindcss": "^2.2.9"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.3",
+    "css-loader": "^6.2.0",
+    "css-minimizer-webpack-plugin": "^3.1.1",
+    "dotenv": "^10.0.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.4.2",
+    "postcss-cli": "^8.3.1",
+    "postcss-loader": "^6.1.1",
     "sass": "^1.39.0",
     "sass-loader": "^12.1.0",
     "source-map-loader": "^3.0.0",
     "style-loader": "^3.2.1",
-    "tailwindcss": "^2.2.9",
     "tailwindcss-text-indent": "^1.0.2",
     "ts-loader": "^9.2.5",
-    "use-http": "^1.0.24",
-    "webpack": "^5.51.2"
-  },
-  "devDependencies": {
-    "webpack-cli": "^4.8.0"
+    "webpack": "^5.51.2",
+    "webpack-cli": "^4.8.0",
+    "webpack-merge": "^5.8.0"
   }
 }

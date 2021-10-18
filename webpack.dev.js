@@ -1,37 +1,12 @@
-const dotenv = require("dotenv");
-if (!dotenv.config()) {
-    console.log(" - Error in webpack.config.js: .env");
-    process.exit(-1);
-}
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common.js')
 const tailwindss = require("tailwindcss");
 const autoprefixer = require("autoprefixer");
-process.traceDeprecation = true;
 
-const {
-    NODE_ENV,
-    WEBSITE_ROOT
-} = process.env;
-module.exports = {
-    mode: NODE_ENV,
-    target: "web",
+module.exports = merge(common, {
+    mode: 'development',
+    devtool: 'eval-source-map',
     watch: true,
-    entry: "./src/main.tsx",
-    output: {
-        path: WEBSITE_ROOT,
-        filename: 'main.js'
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: "EnhancedUI",
-            filename: "Terminal.html",
-            template: "./templates/index.html"
-        })
-    ],
-    resolve: {
-        extensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".css", ".scss"]
-    },
-    devtool: "source-map",
     module: {
         rules: [
             {
@@ -43,17 +18,17 @@ module.exports = {
                 }
             },
             {
-                test: /\.(scss)$/i,
+                test: /\.(sa|sc|c)ss$/i,
                 use: ["style-loader"],
                 exclude: /node_modules/
             },
             {
-                test: /\.(scss)$/i,
+                test: /\.(sa|sc|c)ss$/i,
                 use: ["css-loader"],
                 exclude: /node_modules/
             },
             {
-                test: /\.(scss)$/i,
+                test: /\.(sa|sc|c)ss$/i,
                 loader: "postcss-loader",
                 exclude: /node_modules/,
                 options: {
@@ -66,11 +41,11 @@ module.exports = {
                 }
             },
             {
-                test: /\.(scss)$/i,
+                test: /\.(sa|sc|c)ss$/i,
                 use: ["sass-loader"],
                 exclude: /node_modules/
             },
-            {enforce: "pre", test:/\.js$/, loader: "source-map-loader"}
+            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
         ]
     }
-}
+})

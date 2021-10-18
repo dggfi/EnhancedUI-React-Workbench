@@ -1,7 +1,13 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: [],
+  purge: [
+    './templates/**/*.html',
+    './src/**/*.tsx',
+    './src/**/*.jsx',
+    './examples/**/*.tsx',
+    './examples/**/*.jsx',
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     maxWith: {
